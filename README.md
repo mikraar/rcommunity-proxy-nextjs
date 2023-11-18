@@ -1,3 +1,12 @@
+This is a basic Next.js proxy app, developed by me to enable API requests to Notion database from a Web Client (Zendesk Theme – Community module).
+Deployed using Vercel. Environment variables stored on Vercel.
+
+Check notion.js for actual proxy code.
+
+As usual, ChatGPT and GitHub Co-Pilot were my main Pair programmers.
+
+––––––––––––––––––––––––
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
