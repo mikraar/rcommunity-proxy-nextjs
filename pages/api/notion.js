@@ -24,6 +24,18 @@ function runMiddleware(req, res, fn) {
 }
 
 export default async function handler(req, res) {
+
+  //20.01.2025 – trying to fix HSBC problems with drop-down not showing values in Rcomm topics
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+
+  // If the browser sends a preflight OPTIONS request, just respond with 200
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+  //END OF – 20.01.2025 – trying to fix HSBC problems with drop-down not showing values in Rcomm topics
+  
   // Run the middleware
   await runMiddleware(req, res, cors)
 
